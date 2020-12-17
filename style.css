@@ -12,3 +12,13 @@
     width: 90px;
     height: 90px;
 }
+
+/* Essa já é a posição original da imagem */
+.ladoA {
+    transform: scaleX(1);
+}
+
+/* Inversão da imagem */
+.ladoB {
+    transform: scaleX(-1)
+}

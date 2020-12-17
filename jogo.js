@@ -26,7 +26,7 @@ function posicaoRandomica() {
     // Criar o elemento HTML dinamicamente
     var mosquito = document.createElement('img')
     mosquito.src = "imagens/mosca.png"
-    mosquito.className = tamanhoAleatorio()
+    mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio()
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
@@ -49,4 +49,18 @@ function tamanhoAleatorio() {
         case 2:
             return 'mosquito3'
     }
+}
+
+function ladoAleatorio() {
+        // Produz valores entre 0 e 1
+        var classe = Math.floor(Math.random() * 2)
+
+        // Retorna o nome da classe que será aplicada ao elemento 'mosquito'
+        switch(classe) {
+            case 0:
+                return 'ladoA'
+            
+            case 1:
+                return 'ladoB'
+        }
 }
