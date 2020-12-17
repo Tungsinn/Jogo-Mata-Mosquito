@@ -1,18 +1,25 @@
-altura = 0
-largura = 0
+var altura = 0
+var largura = 0
 
 // Ajusta as variáveis ao tamanho da tela
 function ajustaTamanhoPalcoJogo() {
-    var altura = window.innerHeight
-    var largura = window.innerWidth
+    altura = window.innerHeight
+    largura = window.innerWidth
 }
 ajustaTamanhoPalcoJogo()
 
 function posicaoRandomica() {
     // Gera posições randômicas para o mosquito na tela
     // Math.floor() para arrendondar as casas decimais
-    var posicaoX = Math.floor(Math.random() * largura)
-    var posicaoY = Math.floor(Math.random() * altura)
+    // -90 para que a posição não seja muito próxima das bordas da tela
+
+    var posicaoX = Math.floor(Math.random() * largura) - 90
+    var posicaoY = Math.floor(Math.random() * altura) - 90
+
+    // Evitando gerar posições negativas
+    // Posição recebe 0 se < 0, caso contrário, recebe ela mesma
+    posicaoX = posicaoX < 0 ? 0 : posicaoX
+    posicaoY = posicaoY < 0 ? 0 : posicaoY
 
     console.log(posicaoX, posicaoY)
 
