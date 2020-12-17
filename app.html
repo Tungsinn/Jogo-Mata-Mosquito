@@ -11,7 +11,11 @@
     
         <body onresize="ajustaTamanhoPalcoJogo()">
             <script>
-                posicaoRandomica()
+                // Execução da chamada da função posicaoRandomica() em um
+                // intervalo de 0 a 1000 milisegundos
+                setInterval(function() {
+                    posicaoRandomica()
+                }, 1000)
             </script>
         </body>
     </html>
