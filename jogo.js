@@ -18,7 +18,7 @@ function posicaoRandomica() {
         // coracao_vazio
         // Se v > 3, GAME OVER
         if(vidas > 3) {
-            alert('GAME OVER')
+            window.location.href = 'fim_de_jogo.html'
         } else {
             document.getElementById('v' + vidas).src = "imagens/coracao_vazio.png"
             vidas++
