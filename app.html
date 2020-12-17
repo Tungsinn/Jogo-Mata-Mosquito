@@ -18,14 +18,16 @@
                 </div>
 
                 <div class="cronometro">
-                    Tempo restante: ?
+                    Tempo restante: <span id="cronometro"></span>
                 </div>
             </div>
 
             <script>
+                // Seta o tempo no ínicio da partida
+                document.getElementById('cronometro').innerHTML = tempo
                 // Execução da chamada da função posicaoRandomica() em um
                 // intervalo de 0 a 1000 milisegundos
-                setInterval(function() {
+                var criaMosca = setInterval(function() {
                     posicaoRandomica()
                 }, 1000)
             </script>
