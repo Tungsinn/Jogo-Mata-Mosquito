@@ -3,6 +3,22 @@ var largura = 0
 var vidas = 1
 var tempo = 15
 
+var criaMosquitoTempo = 1500
+
+// recupera da url tudo que está à direta do ?
+// isso determina o nível selecionado pelo usuário
+// cujo tempo é reduzido conforme a dificuldade
+var nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if(nivel === 'normal') {
+    criaMosquitoTempo = 1500
+} else if(nivel === 'dificil') {
+    criaMosquitoTempo = 1000
+} else if(nivel === 'chucknorris') {
+    criaMosquitoTempo = 700
+}
+
 // Ajusta as variáveis ao tamanho da tela
 function ajustaTamanhoPalcoJogo() {
     altura = window.innerHeight
